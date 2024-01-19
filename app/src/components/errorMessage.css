@@ -1,0 +1,35 @@
+.error-message {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  transform: translateY(-50%);
+  background-color: #f88086;
+  border: 2px solid red;
+  color: white;
+  text-align: center;
+  padding: 4rem;
+  z-index: 9999;
+  width: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1.4em;
+}
+
+.error-close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.2rem;
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .error-message {
+    font-size: 1rem;
+    padding: 3rem;
+  }
+}

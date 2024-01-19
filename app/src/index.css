@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-beige: #f5f1e0;
+  --light-green: #576b50;
+  --brown: #66492a;
+  --beige: #cea57a;
+  --dark-green: #182f20;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background-image: url("./assets/bg-texture.png");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Kalnia", serif;
+  color: var(--light-beige);
+  cursor: pointer;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.loading-btn {
+  animation: shimmer 1.2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #04371e 10%,
+    #085b32 30%,
+    #004d26 50%,
+    #085b32 70%,
+    #04371e 90%
+  );
+  background-size: 200% 100%;
+}

@@ -1,0 +1,208 @@
+.reviews-page {
+  margin: 7rem 2rem 3rem 2rem;
+}
+
+.reviews-page h2 {
+  font-size: 2rem;
+  font-family: "Kalnia", serif;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+.reviews-page .reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.reviews-page .review-card {
+  background-color: var(--light-beige);
+  border: 2px solid var(--brown);
+  padding: 2em 2em;
+  border-radius: 2em;
+  flex-basis: calc(50% - 1em);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.reviews-page .coffee-shop-name {
+  font-size: 1.5em;
+  font-family: "Kalnia", serif;
+  color: var(--light-green);
+  margin-bottom: 0em;
+  margin-top: 0;
+}
+
+.reviews-page .review-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--brown);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.reviews-page .location {
+  font-size: 0.8em;
+  margin-top: 0.4em;
+  margin-bottom: 1.4em;
+  color: #333;
+}
+
+.reviews-page .review-detail {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.reviews-page .review-detail .question {
+  font-weight: 600;
+  color: var(--dark-green);
+  margin-right: 0.5em;
+}
+
+.reviews-page .additional-comments,
+p {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.reviews-page .review-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reviews-page .review-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.reviews-page .delete-btn,
+.reviews-page .create-btn {
+  background-color: var(--dark-green);
+  color: var(--light-beige);
+  border-radius: 0.3em;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+
+.reviews-page .delete-btn {
+  position: absolute;
+  bottom: 1.2em;
+  right: 2em;
+}
+
+.delete-btn:hover,
+.create-btn:hover {
+  background-color: var(--brown);
+}
+
+/* modal styles */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+}
+
+.modal-content img {
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.modal-content p {
+  margin-bottom: 24px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.modal-content button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 30px;
+  cursor: pointer;
+  background-color: var(--light-green);
+  color: white;
+  font-size: 1em;
+}
+
+.modal-content button.cancel-btn {
+  background-color: #6c757d;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .reviews-page {
+    margin: 5rem 1rem 2rem 1rem;
+  }
+
+  .reviews-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .reviews-page .reviews-container {
+    gap: 0.5em;
+  }
+
+  .reviews-page .review-card {
+    padding: 1em 1em;
+    flex-basis: 100%;
+    border-radius: 1em;
+  }
+
+  .reviews-page .coffee-shop-name,
+  .reviews-page .review-title,
+  .reviews-page .review-detail,
+  .reviews-page .additional-comments,
+  p {
+    font-size: 0.9em;
+  }
+
+  .reviews-page .delete-btn,
+  .reviews-page .create-btn {
+    font-size: 0.9em;
+  }
+
+  .reviews-page .delete-btn {
+    right: 1em;
+    bottom: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-page {
+    margin: 4rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .reviews-page h2 {
+    font-size: 1.2rem;
+  }
+}

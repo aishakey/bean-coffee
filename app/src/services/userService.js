@@ -1,0 +1,23 @@
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+
+const getUserProfile = async () => {
+  const token = localStorage.getItem("authToken");
+  if (!token) {
+    throw new Error("No auth token found");
+  }
+
+  const decoded = jwtDecode(token);
+  const userId = decoded.id;
+  try {
+    const response = await axios.get(
+      `http://localhost:5000/api/users/${userId}`
+    );
+    return response.data;
+  } catch (error) {
+    console.log("Failed to fetch user data:", error);
+    return null;
+  }
+};
+
+export { getUserProfile };

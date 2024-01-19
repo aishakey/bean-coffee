@@ -1,0 +1,90 @@
+.about-page {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  min-height: auto;
+}
+
+.about-page .speech-box-container {
+  position: relative;
+  display: inline-block;
+  width: 72%;
+  margin-left: 20%;
+}
+
+.about-page .about-bean {
+  max-width: 40%;
+  transform: rotateY(180deg);
+  position: absolute;
+  bottom: 8%;
+  left: -22%;
+}
+
+.about-page .speech-box {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.about-page .about-text {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 11%;
+  bottom: 10%;
+  overflow: auto;
+  text-align: center;
+}
+
+.about-page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  letter-spacing: 0.03125rem;
+}
+
+@media (max-width: 1280px) {
+  .about-page .speech-box-container {
+    width: 80%;
+    margin-left: 16%;
+  }
+
+  .about-page .about-bean {
+    max-width: 30%;
+    bottom: 4%;
+    left: -22%;
+  }
+
+  .about-page .about-text {
+    top: 16%;
+    left: 22%;
+    right: 12%;
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .about-bean,
+  .about-page .speech-box {
+    display: none;
+  }
+
+  .about-page .speech-box-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-page .about-text {
+    position: static;
+    padding: 1em 2em;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    overflow: visible;
+    text-align: left;
+  }
+
+  .about-page p {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,310 @@
+.review-form {
+  background-image: url(../assets/foam.svg);
+  background-size: cover;
+  margin: 9rem auto 4.5rem;
+  max-width: 52.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.review-form .header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.review-form .header h2 {
+  font-family: "Kalnia", serif;
+  color: var(--light-beige);
+  padding-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.review-form .main-photo-preview {
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: cover;
+  border-radius: 0.3125rem;
+  margin-left: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.header input[type="text"],
+.header .location-search-input,
+.select-container select {
+  color: #422800;
+  background-color: var(--light-beige);
+  border: 0.09375rem solid #422800;
+  border-radius: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  width: calc(100% - 1rem);
+  outline: none;
+}
+
+.location-container {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-dropdown-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.suggestion-item,
+.suggestion-item--active {
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.suggestion-item--active {
+  background-color: #e9ecef;
+}
+
+.photo-upload-container {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.photo-upload-container label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--light-beige);
+  text-align: left;
+}
+
+.photo-upload-container input[type="file"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #422800;
+  border-radius: 0.5rem;
+  background-color: var(--light-beige);
+  color: #422800;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.photo-upload-container input[type="file"]:hover {
+  background-color: #f5f5f5;
+}
+
+.photo-upload-container input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+}
+
+.photo-upload-container input[type="file"]::before {
+  content: "Select Photos";
+  display: inline-block;
+  background-color: var(--dark-green);
+  border: 1px solid #422800;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--light-beige);
+}
+
+.photo-upload-container input[type="file"]:hover::before {
+  background-color: var(--brown);
+}
+
+.photo-upload-container input[type="file"]:active::before {
+  background-color: var(--brown);
+}
+
+.review-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.select-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 1.25rem;
+  color: #422800;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.select-container select,
+textarea {
+  border: 1.5px solid #422800;
+  background-color: var(--light-beige);
+  transition: box-shadow 0.3s ease;
+}
+
+.select-container select:focus {
+  box-shadow: 0 0 8px 2px rgba(66, 40, 0, 0.6);
+  outline: none;
+}
+
+.additional-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+textarea:focus {
+  box-shadow: 0 0 8px 2px rgba(66, 40, 0, 0.6);
+  outline: none;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--dark-green);
+  color: var(--light-beige);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+}
+
+.submission-success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.submission-success-content {
+  background-color: var(--light-green);
+  color: white;
+  padding: 1.875rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+}
+
+.submission-success-content p {
+  font-size: 1.1em;
+}
+
+.success-icon {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.form-btn:hover {
+  background-color: var(--brown);
+}
+
+@media screen and (max-width: 1200px) {
+  .review-form {
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 6rem;
+  }
+
+  .review-form .header {
+    padding: 2rem 1rem;
+  }
+
+  .select-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review-form {
+    margin-top: 4rem;
+    max-width: 95%;
+  }
+
+  .review-form .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .photo-upload-container input[type="file"]::before {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .form-btn {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .review-form {
+    margin-top: 6rem;
+    padding: 1rem;
+  }
+
+  .review-form .header {
+    padding: 1rem 0.5rem;
+  }
+
+  .review-form .main-photo-preview {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .header input[type="text"],
+  .header .location-search-input {
+    font-size: 0.8rem;
+  }
+
+  .select-container select,
+  .additional-container textarea {
+    font-size: 0.8rem;
+  }
+
+  .submission-success-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .success-icon {
+    width: 3rem;
+  }
+}

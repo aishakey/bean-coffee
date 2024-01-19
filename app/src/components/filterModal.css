@@ -1,0 +1,78 @@
+.filter-modal {
+  display: none;
+  position: fixed;
+  right: 12.5rem;
+  top: 10rem;
+  background-color: var(--beige);
+  padding: 2.1875rem 1.25rem 1.25rem 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  width: 18.75rem;
+}
+
+.filter-modal.show {
+  display: block;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.125rem;
+  right: 0.9375rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.filter-modal input[type="number"] {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  border: 1px solid var(--brown);
+  border-radius: 0.625rem;
+  outline: none;
+}
+
+.filter-modal .modal-btn {
+  background-color: var(--light-beige);
+  color: #333;
+  padding: 0.625rem 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  width: 48%;
+  margin-top: 0.625rem;
+}
+
+.filter-modal .apply-filter-btn {
+  margin-right: 4%;
+}
+
+.filter-modal .clear-filter-btn {
+  background-color: transparent;
+  color: var(--light-beige);
+  border: 2px solid var(--light-beige);
+}
+
+.filter-modal .modal-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .filter-modal {
+    right: 6.8rem;
+    top: 14rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-modal .modal-btn {
+    font-size: 1rem;
+  }
+}

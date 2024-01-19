@@ -1,0 +1,123 @@
+.profile-container {
+  background-image: url(../assets/paper.png);
+  background-size: cover;
+  color: var(--brown);
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  max-width: 50rem;
+  margin: 11rem auto 0 auto;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14.5rem;
+  min-height: auto;
+}
+
+.profile-photo {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-left: 6rem;
+}
+
+.profile-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-right: 3rem;
+}
+
+.profile-action-buttons .button {
+  background-color: var(--light-beige);
+  border: 0.125rem solid #422800;
+  border-radius: 1.875rem;
+  box-shadow: #422800 0.25rem 0.25rem 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0 1.1rem;
+  line-height: 3.125rem;
+  text-align: center;
+}
+
+.profile-action-buttons .button:hover {
+  background-color: #fff;
+}
+
+.profile-action-buttons .button:active {
+  box-shadow: #422800 0.125rem 0.125rem 0 0;
+  transform: translate(0.125rem, 0.125rem);
+}
+
+.profile-info {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.profile-info span {
+  color: #422800;
+}
+
+.profile-info h2 {
+  font-family: "Kalnia", serif;
+  color: #422800;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 8rem auto 2.6rem auto;
+    padding: 3rem 8rem;
+  }
+
+  .bio,
+  .profile-action-buttons {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .profile-action-buttons {
+    gap: 2rem;
+  }
+
+  .profile-action-buttons .button {
+    font-size: 1rem;
+    padding: 0 1rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    margin: 8rem auto;
+  }
+
+  .profile-photo {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .profile-action-buttons .button {
+    font-size: 0.9rem;
+    padding: 0 0.8rem;
+    line-height: 2.2rem;
+  }
+}

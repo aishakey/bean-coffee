@@ -1,0 +1,152 @@
+.coffee-shops-container {
+  max-width: 1200px;
+}
+
+.coffee-shops-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.4em;
+  font-family: "Kalnia", serif;
+  color: var(--brown);
+}
+
+.coffee-shops-container .search-and-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.coffee-shops-container .search-bar {
+  width: 100%;
+  padding: 0.8em 2.4em;
+  font-size: 1em;
+  border: 2px solid var(--dark-green);
+  border-radius: 50px;
+  background-color: var(--light-green);
+  color: var(--light-beige);
+  outline: none;
+}
+
+.coffee-shops-container .search-input-container {
+  position: relative;
+}
+
+.coffee-shops-container .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.coffee-shops-container .search-bar::placeholder {
+  color: rgba(245, 245, 220, 0.8);
+}
+
+.coffee-shops-container .filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--dark-green);
+  text-decoration: underline;
+  padding: 0.5em 0;
+  margin-left: 10rem;
+}
+
+.coffee-shops-container .filter-btn:hover {
+  color: var(--brown);
+}
+
+.coffee-shops-container .coffee-shops-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.coffee-shops-container .coffee-shop-card {
+  flex-basis: calc(30% - 2em);
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 0.8em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: var(--light-beige);
+  max-width: 240px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coffee-shops-container .coffee-shop-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.coffee-shops-container .coffee-shop-card h3 {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  color: var(--dark-green);
+  font-size: 1.5em;
+}
+
+.coffee-shops-container .coffee-shop-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 1280px) {
+  .coffee-shops-container {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+
+  .coffee-shops-container .coffee-shop-card {
+    flex-basis: calc(50% - 2em);
+  }
+
+  .coffee-shops-container .coffee-shop-card h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .coffee-shops-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .coffee-shops-container .search-and-filter {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .coffee-shops-container .search-bar {
+    padding: 0.8em 2.4em;
+  }
+
+  .coffee-shops-container .filter-btn {
+    margin-left: 9rem;
+  }
+
+  .coffee-shops-container .coffee-shop-card {
+    flex-basis: calc(100% - 2em);
+    max-width: 200px;
+  }
+
+  .coffee-shops-container .coffee-shop-card h3 {
+    font-size: 1.2em;
+  }
+}
