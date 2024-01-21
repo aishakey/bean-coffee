@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com/";
+const BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com";
 
 const instance = axios.create({
   baseURL: BASE_URL,

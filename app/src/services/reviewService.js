@@ -1,7 +1,7 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-const API_BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com/";
+const API_BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com";
 
 const getToken = () => {
   return localStorage.getItem("authToken");

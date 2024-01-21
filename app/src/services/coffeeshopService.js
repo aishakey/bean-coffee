@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com/";
+const API_BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com";
 
 const getCoffeeShops = async (search = "", minRev = "") => {
   try {
