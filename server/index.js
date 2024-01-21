@@ -10,12 +10,22 @@ dotenv.config();
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://bean-coffeeshop-finder.netlify.app",
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+const allowedDomains = [
+  "https://bean-coffeeshop-finder.netlify.app",
+  "https://main--bean-coffeeshop-finder.netlify.app",
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedDomains.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    optionsSuccessStatus: 200,
+  })
+);
 
 app.use(express.json());
 
