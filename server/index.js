@@ -9,14 +9,8 @@ import reviewRoutes from "./routes/reviewRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? process.env.ALLOWED_ORIGIN
-        : "http://localhost:3000",
-  })
-);
+
+app.use(cors());
 
 app.use(express.json());
 
