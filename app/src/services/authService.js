@@ -1,8 +1,14 @@
 import axios from "axios";
 
+const BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com/";
+
+const instance = axios.create({
+  baseURL: BASE_URL,
+});
+
 const loginUser = async (email, password) => {
   try {
-    const response = await axios.post("http://localhost:5000/api/users/login", {
+    const response = await instance.post("/api/users/login", {
       email,
       password,
     });
@@ -18,15 +24,13 @@ const loginUser = async (email, password) => {
 
 const registerUser = async (name, username, email, password) => {
   try {
-    const response = await axios.post(
-      "http://localhost:5000/api/users/register",
-      {
-        name,
-        username,
-        email,
-        password,
-      }
-    );
+    const response = await instance.post("/api/users/register", {
+      name,
+      username,
+      email,
+      password,
+    });
+
     localStorage.setItem("authToken", response.data.token);
     return true;
   } catch (error) {

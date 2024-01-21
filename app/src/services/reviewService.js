@@ -1,7 +1,7 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://bean-coffee-4f8e78ba9adc.herokuapp.com/";
 
 const getToken = () => {
   return localStorage.getItem("authToken");
@@ -10,7 +10,7 @@ const getToken = () => {
 const getUserReviews = async () => {
   try {
     const token = getToken();
-    const response = await axios.get(`${API_BASE_URL}/reviews`, {
+    const response = await axios.get(`${API_BASE_URL}/api/reviews`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;
@@ -24,7 +24,7 @@ const checkCoffeeShopExists = async (location) => {
   const token = getToken();
 
   try {
-    const response = await axios.get(`${API_BASE_URL}/reviews/exists`, {
+    const response = await axios.get(`${API_BASE_URL}/api/reviews/exists`, {
       params: { location },
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -45,7 +45,7 @@ const uploadPhotos = async (photos) => {
 
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/reviews/upload`,
+      `${API_BASE_URL}/api/reviews/upload`,
       formData,
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -70,9 +70,13 @@ const uploadPhotos = async (photos) => {
 const submitReview = async (reviewData) => {
   const token = getToken();
   try {
-    const response = await axios.post(`${API_BASE_URL}/reviews`, reviewData, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await axios.post(
+      `${API_BASE_URL}/api/reviews`,
+      reviewData,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     return response.data;
   } catch (error) {
     if (error.response) {
@@ -98,10 +102,13 @@ const deleteReview = async (reviewId) => {
   const userId = decoded.id;
 
   try {
-    const response = await axios.delete(`${API_BASE_URL}/reviews/${reviewId}`, {
-      headers: { Authorization: `Bearer ${token}` },
-      data: { userId: userId },
-    });
+    const response = await axios.delete(
+      `${API_BASE_URL}/api/reviews/${reviewId}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+        data: { userId: userId },
+      }
+    );
     if (response.status === 200 || response.status === 204) {
       return true;
     } else {

@@ -11,7 +11,7 @@ const getUserProfile = async () => {
   const userId = decoded.id;
   try {
     const response = await axios.get(
-      `http://localhost:5000/api/users/${userId}`
+      `https://bean-coffee-4f8e78ba9adc.herokuapp.com/api/users/${userId}`
     );
     return response.data;
   } catch (error) {
