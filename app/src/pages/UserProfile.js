@@ -80,7 +80,7 @@ const UserProfile = () => {
           My Reviews
         </button>
         <button className="button" onClick={handleCreateReviewClick}>
-          Create Review
+          Add Review
         </button>
       </div>
     </div>
