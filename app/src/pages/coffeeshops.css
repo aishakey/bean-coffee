@@ -1,5 +1,6 @@
 .coffee-shops-container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .coffee-shops-container h2 {
