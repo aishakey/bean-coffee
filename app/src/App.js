@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Coffeeshops from "./pages/Coffeeshops";
 import Coffeeshop from "./pages/Coffeeshop";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import UserProfile from "./pages/UserProfile";
@@ -29,6 +30,7 @@ const AppWithRouter = () => {
             <Route path="/coffeeshops" element={<Coffeeshops />} />
             <Route path="/coffeeshops/:id" element={<Coffeeshop />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
             {/* Protected routes */}

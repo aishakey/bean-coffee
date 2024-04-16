@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="navigation">
       <Link to="/" onClick={closeMenu}>
-        <img src={beanLogo} alt="Outlined Coffee Bean" className="bean-icon" />
+        <img src={beanLogo} alt="bean" className="bean-icon" />
       </Link>
 
       <div className="hamburger-menu" onClick={toggleMenu}>
@@ -35,27 +35,30 @@ const Navbar = () => {
 
       <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
         <Link to="/coffeeshops" onClick={closeMenu}>
-          CoffeeShops
+          coffee shops
         </Link>
         <Link to="/about" onClick={closeMenu}>
-          About
+          about
+        </Link>
+        <Link to="/contact" onClick={closeMenu}>
+          contact
         </Link>
         {isAuthenticated ? (
           <>
             <Link to="/profile" onClick={closeMenu}>
-              Profile
+              my profile
             </Link>
-            <button onClick={handleLogout} className="sign-out-btn">
-              Sign Out
+            <button onClick={handleLogout} className="auth-btn sign-out-btn">
+              sign out
             </button>
           </>
         ) : (
           <>
-            <Link to="/signup" onClick={closeMenu}>
-              Sign Up
+            <Link to="/signin" onClick={closeMenu} className="login-btn">
+              login
             </Link>
-            <Link to="/signin" onClick={closeMenu}>
-              Sign In
+            <Link to="/signup" onClick={closeMenu} className="auth-btn">
+              sign up
             </Link>
           </>
         )}
