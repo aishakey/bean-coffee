@@ -27,7 +27,19 @@
 
 .login-btn {
   border: 1px solid #616161;
+}
+
+.auth-btn,
+.login-btn {
   border-radius: 2px;
+}
+
+.auth-btn:hover {
+  background-color: rgb(172, 172, 172);
+}
+
+.login-btn:hover {
+  border-color: var(--main-black);
 }
 
 .hamburger-menu {
@@ -58,7 +70,22 @@
     z-index: 11;
   }
 
+  .login-btn {
+    border: none;
+  }
+
   .navigation .navbar-links.open {
     right: 0;
+  }
+
+  .navbar-links a,
+  .navbar-links .auth-btn {
+    color: white;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links .auth-btn:hover {
+    color: white;
+    background-color: transparent;
   }
 }

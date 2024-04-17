@@ -21,6 +21,15 @@ body {
 
 h1 {
   font-family: "Playfair Display", serif;
+  color: var(--main-black);
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
 }
 
 html {
@@ -28,7 +37,8 @@ html {
 }
 
 button {
-  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
 }
 
 a {
