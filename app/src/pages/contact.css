@@ -93,6 +93,7 @@
 .contact-page input:focus,
 .contact-page textarea:focus {
   outline: none;
+  box-shadow: none;
 }
 
 @media (max-width: 767px) {
@@ -105,8 +106,17 @@
     width: 100%;
   }
 
+  .input-group {
+    flex-direction: column;
+  }
+
   .input-container {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .input-container:last-child {
+    margin-bottom: 0;
   }
 
   .input-container label,

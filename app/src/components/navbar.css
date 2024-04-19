@@ -25,6 +25,10 @@
   color: var(--light-gray);
 }
 
+.sign-out-btn {
+  border: none;
+}
+
 .login-btn {
   border: 1px solid #616161;
 }

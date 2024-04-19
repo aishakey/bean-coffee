@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import coffeeBag from "../assets/coffee-bag.svg";
-import bubbles from "../assets/bubbles.svg";
 import "./authForm.css";
 
 const AuthForm = ({
@@ -17,22 +15,14 @@ const AuthForm = ({
   };
   return (
     <div className="auth-form-container">
-      <div className="img-container">
-        <img src={bubbles} className="bubbles" alt="bubbles" />
-        <img
-          src={coffeeBag}
-          className="coffee-bag"
-          alt="A bag of coffee beans"
-        />
-      </div>
       <div className="auth-card">
-        <h1>{title}</h1>
+        <h1>{title.toUpperCase()}</h1>
         <form className="auth-form" onSubmit={handleSubmit}>
           {fields.map((field) => (
             <React.Fragment key={field.id}>
-              <label htmlFor={field.id} className="form-label">
+              {/* <label htmlFor={field.id} className="form-label">
                 {field.label}
-              </label>
+              </label> */}
               <input
                 type={field.type}
                 id={field.id}
