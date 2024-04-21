@@ -5,7 +5,7 @@ import { getUserProfile } from "../services/userService";
 import "./userProfile.css";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
-import userImg from "../assets/user-img.svg";
+import userImg from "../assets/userImg.svg";
 
 const UserProfile = () => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -61,26 +61,25 @@ const UserProfile = () => {
 
   return (
     <div className="profile-container">
-      <div className="bio">
-        <div className="profile-photo">
-          <img src={userImg} alt="User Placeholder" />
-        </div>
-        <div className="profile-info">
-          <h2>{userData.name}</h2>
-          <p>
-            <span>Email:</span> {userData.email}
-          </p>
-          <p>
-            <span>Username:</span> {userData.username}
-          </p>
-        </div>
+      <div className="profile-photo">
+        <img src={userImg} alt="User Placeholder" />
+      </div>
+      <div className="profile-info">
+        <h2>{userData.name}</h2>
+        <p>
+          <span>email:</span> {userData.email}
+        </p>
+        <p>
+          <span>username:</span>
+          {userData.username}
+        </p>
       </div>
       <div className="profile-action-buttons">
-        <button className="button" onClick={handleMyReviewsClick}>
-          My Reviews
+        <button className="button-profile" onClick={handleMyReviewsClick}>
+          my reviews
         </button>
-        <button className="button" onClick={handleCreateReviewClick}>
-          Add Review
+        <button className="button-profile" onClick={handleCreateReviewClick}>
+          add review
         </button>
       </div>
     </div>
