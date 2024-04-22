@@ -5,8 +5,6 @@ import { getUserReviews, deleteReview } from "../services/reviewService";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
 import "./userReviews.css";
-import deleteBean from "../assets/trash.svg";
-import pendingBean from "../assets/thinking-bean.svg";
 
 const UserReviews = () => {
   const navigate = useNavigate();
@@ -80,30 +78,28 @@ const UserReviews = () => {
         case "pending":
           return (
             <div>
-              <img src={pendingBean} alt="Pending" />
               <p>Are you sure you want to delete this review?</p>
-              <button onClick={confirmDelete}>Yes, Delete</button>
+              <button onClick={confirmDelete}>delete</button>
               <button
                 onClick={() => setIsDeleteModalOpen(false)}
                 className="cancel-btn"
               >
-                Cancel
+                cancel
               </button>
             </div>
           );
         case "success":
           return (
             <div>
-              <img src={deleteBean} alt="Success" />
               <p>Review deleted successfully!</p>
-              <button onClick={() => setIsDeleteModalOpen(false)}>Close</button>
+              <button onClick={() => setIsDeleteModalOpen(false)}>close</button>
             </div>
           );
         case "failed":
           return (
             <div>
               <p>Failed to delete review. Please try again.</p>
-              <button onClick={() => setIsDeleteModalOpen(false)}>Close</button>
+              <button onClick={() => setIsDeleteModalOpen(false)}>close</button>
             </div>
           );
         default:
@@ -138,27 +134,30 @@ const UserReviews = () => {
                 {review.coffeeShop?.name || "Coffee Shop Name"}
               </h3>
               <p className="location">{review.coffeeShop?.location}</p>
-              <h4 className="review-title">{review.title}</h4>
-              <p className="review-detail">
-                <span className="question">WiFi Speed:</span> {review.wifiSpeed}
-              </p>
-              <p className="review-detail">
-                <span className="question">Seating:</span> {review.seating}
-              </p>
-              <p className="review-detail">
-                <span className="question">Vibe:</span> {review.vibe}
-              </p>
-              <p className="review-detail">
-                <span className="question">Food:</span> {review.food}
-              </p>
-              <p className="review-detail">
-                <span className="question">Drink:</span> {review.drink}
-              </p>
-              <p className="review-detail">
-                <span className="question">Noise Level:</span> {review.noisy}
-              </p>
-              {review.additionalComments && (
+              <h4 className="review-title">{review.title.toUpperCase()}</h4>
+              <div className="review-details-grid">
                 <p className="review-detail">
+                  <span className="question">WiFi Speed:</span>{" "}
+                  {review.wifiSpeed}
+                </p>
+                <p className="review-detail">
+                  <span className="question">Seating:</span> {review.seating}
+                </p>
+                <p className="review-detail">
+                  <span className="question">Vibe:</span> {review.vibe}
+                </p>
+                <p className="review-detail">
+                  <span className="question">Food:</span> {review.food}
+                </p>
+                <p className="review-detail">
+                  <span className="question">Drink:</span> {review.drink}
+                </p>
+                <p className="review-detail">
+                  <span className="question">Noise Level:</span> {review.noisy}
+                </p>
+              </div>
+              {review.additionalComments && (
+                <p className="review-detail comments">
                   <span className="question">Comments:</span>{" "}
                   {review.additionalComments}
                 </p>
