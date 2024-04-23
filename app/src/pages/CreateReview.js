@@ -11,7 +11,6 @@ import {
 } from "../services/reviewService";
 import "./createReview.css";
 import ErrorMessage from "../components/ErrorMessage";
-import HappyBean from "../assets/happy-bean.svg";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import useFormSubmission from "../hooks/useFormSubmission";
@@ -289,14 +288,13 @@ const CreateReview = () => {
       {submissionSuccess && (
         <div className="submission-success-message">
           <div className="submission-success-content">
-            <img src={HappyBean} alt="Success" className="success-icon" />
             <p>Your review has been submitted successfully!</p>
           </div>
         </div>
       )}
+      <h2 className="review-head">CREATE REVIEW</h2>
       <form onSubmit={handleSubmit} className="review-form">
         <div className="header">
-          <h2>Create Review</h2>
           {mainPhoto && (
             <img
               src={URL.createObjectURL(mainPhoto)}
@@ -310,7 +308,7 @@ const CreateReview = () => {
             name="coffeeShopName"
             value={formData.coffeeShopName}
             onChange={handleChange}
-            placeholder="Coffee Shop Name"
+            placeholder="enter coffeeshop name"
           />
 
           <input
@@ -318,7 +316,7 @@ const CreateReview = () => {
             name="reviewTitle"
             value={formData.reviewTitle}
             onChange={handleChange}
-            placeholder="Review Title"
+            placeholder="enter title of your review"
           />
 
           <div className="location-container">
@@ -337,7 +335,7 @@ const CreateReview = () => {
                   <input
                     {...getInputProps({
                       id: "locationSearch",
-                      placeholder: "Location ...",
+                      placeholder: "enter location",
                       className: "location-search-input",
                     })}
                   />
@@ -365,7 +363,7 @@ const CreateReview = () => {
             </PlacesAutocomplete>
           </div>
           <div className="photo-upload-container">
-            <label htmlFor="photo-upload">Upload Photos:</label>
+            <label htmlFor="photo-upload">UPLOAD PHOTOS:</label>
             <input
               type="file"
               id="photo-upload"
@@ -381,7 +379,7 @@ const CreateReview = () => {
           <div className="select-container">
             <select name="wifi" value={formData.wifi} onChange={handleChange}>
               <option disabled value="">
-                WiFi Speed
+                wifi speed
               </option>
               <option value="Fast">Fast</option>
               <option value="Moderate">Moderate</option>
@@ -394,7 +392,7 @@ const CreateReview = () => {
               onChange={handleChange}
             >
               <option disabled value="">
-                Seating
+                seating
               </option>
               <option value="Great for working">Great for working</option>
               <option value="Just okay">Just okay</option>
@@ -405,7 +403,7 @@ const CreateReview = () => {
 
             <select name="vibe" value={formData.vibe} onChange={handleChange}>
               <option disabled value="">
-                Vibe
+                vibe
               </option>
               <option value="Cozy">Cozy</option>
               <option value="Modern">Modern</option>
@@ -416,7 +414,7 @@ const CreateReview = () => {
 
             <select name="food" value={formData.food} onChange={handleChange}>
               <option disabled value="">
-                Food Options
+                food options
               </option>
               <option value="Full meals">Full meals</option>
               <option value="Snacks">Snacks</option>
@@ -426,7 +424,7 @@ const CreateReview = () => {
 
             <select name="drink" value={formData.drink} onChange={handleChange}>
               <option disabled value="">
-                Drink Quality
+                drink quality
               </option>
               <option value="Great">Great</option>
               <option value="So so">So so</option>
@@ -439,7 +437,7 @@ const CreateReview = () => {
               onChange={handleChange}
             >
               <option disabled value="">
-                Noise Level
+                noise level
               </option>
               <option value="Loud">Loud</option>
               <option value="Normal">Normal</option>
@@ -451,14 +449,14 @@ const CreateReview = () => {
               name="additional"
               value={formData.additional}
               onChange={handleChange}
-              placeholder="Additional thoughts"
+              placeholder="additional thoughts"
             />
             <button
               className={`form-btn ${isSubmitting ? "loading-btn" : ""}`}
               type="submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Submit Review"}
+              {isSubmitting ? "submitting..." : "submit review"}
             </button>
           </div>
         </div>
