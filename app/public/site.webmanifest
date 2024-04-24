@@ -1,6 +1,6 @@
 {
-    "name": "bean",
-    "short_name": "bean",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#4a4a4a",
-    "background_color": "#4a4a4a",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
     "display": "standalone"
 }
