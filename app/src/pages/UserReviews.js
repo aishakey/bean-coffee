@@ -125,7 +125,7 @@ const UserReviews = () => {
   return (
     <div className="reviews-page">
       {isDeleteModalOpen && <DeleteConfirmationModal />}
-      <h2>My Reviews</h2>
+      <h2>MY REVIEWS</h2>
       {reviews.length > 0 ? (
         <div className="reviews-container">
           {reviews.map((review) => (

@@ -32,6 +32,11 @@
   color: var(--light-gray);
 }
 
+.profile-span {
+  font-weight: 600;
+  color: rgb(167, 167, 167);
+}
+
 .profile-action-buttons {
   display: flex;
   gap: 30px;
@@ -45,7 +50,7 @@
   cursor: pointer;
   border-radius: 2px;
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 50px;
   margin-top: 14px;
 }
