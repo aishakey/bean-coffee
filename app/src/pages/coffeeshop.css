@@ -8,19 +8,20 @@
 
 .coffee-shop-details .coffee-shop-location {
   margin: 0.5em 0;
+  font-family: "Raleway", sans-serif;
 }
 
 .coffee-shop-details h2 {
   margin-top: 0;
-  font-family: "Kalnia", serif;
-  color: var(--brown);
+  font-family: "Playfair Display", serif;
+  color: var(--main-black);
 }
 
 .coffee-shop-details .coffee-shop-image {
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 0.5em;
+  border-radius: 2px;
   margin-bottom: 1em;
 }
 
@@ -51,7 +52,7 @@
 .coffee-shop-details .reviews .review-heading,
 .coffee-shop-details .coffeeshop-photos-container h3 {
   text-align: center;
-  color: var(--dark-green);
+  color: var(--medium-gray);
 }
 
 .coffee-shop-details .review-card {
@@ -59,12 +60,12 @@
   grid-template-columns: 1fr 3fr;
   gap: 1em;
   padding: 1em 2em;
-  border-radius: 0.5em;
+  border-radius: 2px;
   margin-bottom: 2em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  background-color: var(--light-beige);
-  border: 2px solid var(--brown);
+  background-color: var(--main-black);
+  color: var(--light-gray);
   min-width: 700px;
+  font-family: "Lato", sans-serif;
 }
 
 .coffee-shop-details .review-username,
@@ -75,10 +76,11 @@
 
 .coffee-shop-details .review-username {
   font-size: 1em;
+  font-family: "Playfair Display", serif;
 }
 
 .coffee-shop-details .review-title {
-  color: var(--brown);
+  color: var(--light-gray);
 }
 
 .coffee-shop-details .review-details {
@@ -88,11 +90,12 @@
   grid-gap: 2em 0.5em;
   margin-left: 2em;
   padding: 0.3em 0 1em 0;
+  font-family: "Raleway", sans-serif;
 }
 
 .coffee-shop-details .review-card p {
   margin: 0;
-  color: #333;
+  color: var(--light-gray);
 }
 
 .coffee-shop-details .review-card p span {
@@ -115,7 +118,7 @@
   height: 80px;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 1200px) {

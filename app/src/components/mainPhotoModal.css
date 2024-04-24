@@ -30,7 +30,7 @@
 .main-photo-modal .modal-content img {
   width: 100px;
   height: 100px;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-bottom: 20px;
 }
 
@@ -40,18 +40,22 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
 }
 .main-photo-modal .go-to-profile-btn {
   color: rgb(128, 128, 128);
   background: transparent;
-  border: 2px solid rgb(128, 128, 128);
+  border: none;
+  border: 1.5px solid rgb(128, 128, 128);
 }
 
 .main-photo-modal .pick-btn {
-  background-color: var(--brown);
+  background-color: var(--main-black);
+  color: var(--light-gray);
 }
 
 .main-photo-modal .confirm-btn {
-  background-color: var(--light-green);
+  background-color: transparent;
+  color: var(--main-black);
+  border: none;
+  border: 1.5px solid var(--main-black);
 }

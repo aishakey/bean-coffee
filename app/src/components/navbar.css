@@ -2,27 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 1em;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  z-index: 10;
+  padding: 1em 3em 0 3em;
 }
 
-.navigation .bean-icon {
-  height: 5em;
+.bean-icon {
+  height: 50px;
   width: auto;
-  margin-left: 1em;
-  padding-top: 0.5em;
-}
-
-.navigation .navbar-links {
-  display: flex;
-  background-color: rgba(29, 29, 29, 0.75);
-  border-top-left-radius: 3.125em;
-  border-bottom-left-radius: 3.125em;
-  padding: 0.8em 1em;
 }
 
 .navbar-links a,
@@ -33,22 +18,32 @@
   margin: 0 0.5em;
 }
 
-.navbar-links .sign-out-btn {
-  background: none;
-  border: none;
-  color: var(--light-beige);
-  font-family: "Kalnia", serif;
+.auth-btn {
+  font-family: "Lato", sans-serif;
   cursor: pointer;
+  background-color: var(--main-black);
+  color: var(--light-gray);
 }
 
-.sign-out-btn:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.sign-out-btn {
+  border: none;
 }
 
-.navbar-links a:active,
-.navbar-links button:active {
-  transform: scale(0.98);
+.login-btn {
+  border: 1px solid #616161;
+}
+
+.auth-btn,
+.login-btn {
+  border-radius: 2px;
+}
+
+.auth-btn:hover {
+  background-color: rgb(172, 172, 172);
+}
+
+.login-btn:hover {
+  border-color: var(--main-black);
 }
 
 .hamburger-menu {
@@ -58,30 +53,43 @@
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
-    margin-right: 1em;
-    padding-top: 0.5em;
     cursor: pointer;
   }
 
   .navigation .navbar-links {
     position: fixed;
-    top: 6em;
+    top: 5em;
     right: -100%;
     height: 40%;
-    width: 56%;
-    background-color: rgba(29, 29, 29, 0.9);
+    width: 50%;
+    background-color: var(--main-black);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 3.125em;
-    border-bottom-left-radius: 3.125em;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
     padding: 2em 1.2em;
     transition: right 0.3s ease;
     z-index: 11;
   }
 
+  .login-btn {
+    border: none;
+  }
+
   .navigation .navbar-links.open {
     right: 0;
+  }
+
+  .navbar-links a,
+  .navbar-links .auth-btn {
+    color: white;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links .auth-btn:hover {
+    color: white;
+    background-color: transparent;
   }
 }

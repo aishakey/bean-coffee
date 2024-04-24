@@ -3,11 +3,11 @@
   position: fixed;
   right: 12.5rem;
   top: 10rem;
-  background-color: var(--beige);
+  background-color: white;
   padding: 2.1875rem 1.25rem 1.25rem 1.25rem;
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 100;
   width: 18.75rem;
 }
 
@@ -31,19 +31,19 @@
   width: 100%;
   padding: 0.625rem;
   margin-bottom: 0.625rem;
-  border: 1px solid var(--brown);
-  border-radius: 0.625rem;
+  border: 1px solid var(--main-black);
+  border-radius: 2px;
   outline: none;
 }
 
 .filter-modal .modal-btn {
-  background-color: var(--light-beige);
-  color: #333;
+  background-color: var(--main-black);
+  color: var(--light-gray);
   padding: 0.625rem 0.9375rem;
   font-size: 0.875rem;
   font-weight: 600;
   border: none;
-  border-radius: 0.625rem;
+  border-radius: 2px;
   cursor: pointer;
   width: 48%;
   margin-top: 0.625rem;
@@ -55,24 +55,29 @@
 
 .filter-modal .clear-filter-btn {
   background-color: transparent;
-  color: var(--light-beige);
-  border: 2px solid var(--light-beige);
+  color: var(--main-black);
+  border: 1.5px solid var(--main-black);
 }
 
 .filter-modal .modal-btn:hover {
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .filter-modal {
-    right: 6.8rem;
-    top: 14rem;
-    width: 20rem;
+    top: 50%;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 2rem;
+    box-sizing: border-box;
   }
-}
 
-@media (max-width: 480px) {
-  .filter-modal .modal-btn {
+  .filter-modal .modal-btn,
+  .filter-modal input[type="number"] {
     font-size: 1rem;
   }
 }

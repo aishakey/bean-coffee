@@ -73,9 +73,10 @@ const Coffeeshops = () => {
 
   return (
     <div className="coffee-shops-container">
+      <h2>COFFEE SHOPS</h2>
       <div className="search-and-filter">
         <button className="filter-btn" onClick={toggleFilterModal}>
-          Filter
+          filter
         </button>
         <div className="search-input-container">
           <img src={searchIcon} alt="Search" className="search-icon" />
@@ -128,7 +129,6 @@ const Coffeeshops = () => {
         />
       )}
 
-      <h2>Coffee Shops</h2>
       {coffeeShops.length > 0 ? (
         <div className="coffee-shops-list">
           {coffeeShops.map((shop) => (
@@ -148,7 +148,7 @@ const Coffeeshops = () => {
           ))}
         </div>
       ) : (
-        <p>No coffee shops found.</p>
+        <p className="not-found-cs">No coffee shops found.</p>
       )}
     </div>
   );

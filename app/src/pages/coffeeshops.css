@@ -3,30 +3,36 @@
   margin: 0 auto;
 }
 
+.not-found-cs {
+  text-align: center;
+  margin-top: 6em;
+}
+
 .coffee-shops-container h2 {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1.4em;
-  font-family: "Kalnia", serif;
-  color: var(--brown);
+  margin-bottom: 1.2em;
+  letter-spacing: 0.19em;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
 }
 
 .coffee-shops-container .search-and-filter {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 4em;
 }
 
 .coffee-shops-container .search-bar {
   width: 100%;
   padding: 0.8em 2.4em;
   font-size: 1em;
-  border: 2px solid var(--dark-green);
-  border-radius: 50px;
-  background-color: var(--light-green);
-  color: var(--light-beige);
+  border: none;
+  border-radius: 2px;
+  background-color: var(--main-black);
+  color: var(--light-gray);
   outline: none;
 }
 
@@ -39,12 +45,14 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .coffee-shops-container .search-bar::placeholder {
-  color: rgba(245, 245, 220, 0.8);
+  color: var(--light-gray);
+  font-family: "Raleway", sans-serif;
+  padding-left: 4px;
 }
 
 .coffee-shops-container .filter-btn {
@@ -52,14 +60,13 @@
   border: none;
   cursor: pointer;
   font-size: 1em;
-  color: var(--dark-green);
-  text-decoration: underline;
-  padding: 0.5em 0;
-  margin-left: 10rem;
+  color: var(--main-black);
+  padding: 0.2em 5em;
+  margin-left: 13em;
 }
 
 .coffee-shops-container .filter-btn:hover {
-  color: var(--brown);
+  opacity: 0.7;
 }
 
 .coffee-shops-container .coffee-shops-list {
@@ -73,13 +80,11 @@
 .coffee-shops-container .coffee-shop-card {
   flex-basis: calc(30% - 2em);
   flex-grow: 1;
-  border: 1px solid #ddd;
   padding: 1em;
-  border-radius: 0.8em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  background-color: var(--light-beige);
+  background-color: var(--main-black);
   max-width: 240px;
   position: relative;
   display: flex;
@@ -89,13 +94,12 @@
 
 .coffee-shops-container .coffee-shop-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .coffee-shops-container .coffee-shop-card h3 {
   padding: 0.5em;
   margin: 0.5em 0;
-  color: var(--dark-green);
+  color: var(--light-gray);
   font-size: 1.5em;
 }
 
@@ -105,7 +109,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 0.5em;
+  border-radius: 2px;
   margin-bottom: 1em;
 }
 
@@ -130,8 +134,7 @@
   }
 
   .coffee-shops-container .search-and-filter {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .coffee-shops-container .search-bar {
