@@ -20,42 +20,6 @@
   color: var(--main-black);
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -1500px 0;
-  }
-  100% {
-    background-position: 1500px 0;
-  }
-}
-
-.image-placeholder {
-  background-color: #dbdbdb;
-  background-image: linear-gradient(
-    to right,
-    #dbdbdb 0%,
-    #e0e0e0 50%,
-    #dbdbdb 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 1500px 100%;
-  animation: shimmer 2s linear infinite;
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.image-placeholder img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
 .large-photo {
   width: 60%;
   display: block;
