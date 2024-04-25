@@ -20,12 +20,29 @@
   color: var(--main-black);
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -1500px 0;
+  }
+  100% {
+    background-position: 1500px 0;
+  }
+}
+
 .image-placeholder {
-  background-color: #d7d7d7;
+  background-color: #dbdbdb;
+  background-image: linear-gradient(
+    to right,
+    #dbdbdb 0%,
+    #e0e0e0 50%,
+    #dbdbdb 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 1500px 100%;
+  animation: shimmer 2s linear infinite;
   position: relative;
   display: block;
-  height: 0;
-  padding-top: 56.25%;
+  width: 100%;
 }
 
 .image-placeholder img {
@@ -36,7 +53,7 @@
   height: auto;
   display: block;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out 0.5s;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .large-photo {
