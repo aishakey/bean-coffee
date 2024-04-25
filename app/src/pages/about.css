@@ -20,6 +20,22 @@
   color: var(--main-black);
 }
 
+.image-placeholder {
+  background-color: #b4b4b4;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.image-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
 .large-photo {
   width: 60%;
   display: block;

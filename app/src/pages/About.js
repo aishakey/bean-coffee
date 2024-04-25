@@ -1,22 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.css";
 import largePhoto from "../assets/largePhoto.svg";
 import verticalPhoto from "../assets/verticalPhoto.svg";
 import sideImage from "../assets/sideImage.svg";
 
 const About = () => {
+  const [imageLoaded, setImageLoaded] = useState({
+    large: false,
+    vertical: false,
+    side: false,
+  });
+
   return (
     <div className="about-page">
       <h1>
         OUR PHILOSOPHY &<br /> BRAND IDENTITY
       </h1>
-      <img src={largePhoto} alt="Large View" className="large-photo" />
-      <div className="lower-section">
+      <div
+        className={`image-placeholder ${imageLoaded.large ? "" : "loading"}`}
+      >
         <img
-          src={verticalPhoto}
-          alt="Vertical View"
-          className="vertical-photo"
+          src={largePhoto}
+          alt="Large View"
+          className="large-photo"
+          onLoad={() => setImageLoaded({ ...imageLoaded, large: true })}
+          style={{
+            opacity: imageLoaded.large ? 1 : 0,
+            transition: "opacity 0.5s ease-in",
+          }}
         />
+      </div>
+      <div className="lower-section">
+        <div
+          className={`image-placeholder ${
+            imageLoaded.vertical ? "" : "loading"
+          }`}
+        >
+          <img
+            src={verticalPhoto}
+            alt="Vertical View"
+            className="vertical-photo"
+            onLoad={() => setImageLoaded({ ...imageLoaded, vertical: true })}
+            style={{
+              opacity: imageLoaded.vertical ? 1 : 0,
+              transition: "opacity 0.5s ease-in",
+            }}
+          />
+        </div>
+
         <div className="text-beside-vertical">
           <p>
             Bean was created out of love for coffee and the community that
@@ -42,7 +73,20 @@ const About = () => {
           discovering a space where productivity, relaxation, and community
           thrive in harmony with your personal rhythm.
         </p>
-        <img src={sideImage} alt="Side View" className="side-image" />
+        <div
+          className={`image-placeholder ${imageLoaded.side ? "" : "loading"}`}
+        >
+          <img
+            src={sideImage}
+            alt="Side View"
+            className="side-image"
+            onLoad={() => setImageLoaded({ ...imageLoaded, side: true })}
+            style={{
+              opacity: imageLoaded.side ? 1 : 0,
+              transition: "opacity 0.5s ease-in",
+            }}
+          />
+        </div>
       </div>
       <h2 className="center-text">
         JOIN US ON THIS JOURNEY TO EXPLORE, CONNECT, AND FIND YOUR SPACE - ONE
