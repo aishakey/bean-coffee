@@ -21,11 +21,11 @@
 }
 
 .image-placeholder {
-  background-color: #b4b4b4;
-  width: 100%;
+  background-color: #d7d7d7;
+  position: relative;
+  display: block;
   height: 0;
   padding-top: 56.25%;
-  position: relative;
 }
 
 .image-placeholder img {
@@ -34,6 +34,9 @@
   left: 0;
   width: 100%;
   height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.5s;
 }
 
 .large-photo {

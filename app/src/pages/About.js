@@ -11,40 +11,34 @@ const About = () => {
     side: false,
   });
 
+  const handleImageLoad = (imageKey) => {
+    setTimeout(() => {
+      setImageLoaded((prev) => ({ ...prev, [imageKey]: true }));
+    }, 500);
+  };
+
   return (
     <div className="about-page">
       <h1>
         OUR PHILOSOPHY &<br /> BRAND IDENTITY
       </h1>
-      <div
-        className={`image-placeholder ${imageLoaded.large ? "" : "loading"}`}
-      >
+      <div className="image-placeholder" style={{ width: "60%" }}>
         <img
           src={largePhoto}
           alt="Large View"
           className="large-photo"
-          onLoad={() => setImageLoaded({ ...imageLoaded, large: true })}
-          style={{
-            opacity: imageLoaded.large ? 1 : 0,
-            transition: "opacity 0.5s ease-in",
-          }}
+          onLoad={() => handleImageLoad("large")}
+          style={{ opacity: imageLoaded.large ? 1 : 0 }}
         />
       </div>
       <div className="lower-section">
-        <div
-          className={`image-placeholder ${
-            imageLoaded.vertical ? "" : "loading"
-          }`}
-        >
+        <div className="image-placeholder" style={{ width: "30%" }}>
           <img
             src={verticalPhoto}
             alt="Vertical View"
             className="vertical-photo"
-            onLoad={() => setImageLoaded({ ...imageLoaded, vertical: true })}
-            style={{
-              opacity: imageLoaded.vertical ? 1 : 0,
-              transition: "opacity 0.5s ease-in",
-            }}
+            onLoad={() => handleImageLoad("vertical")}
+            style={{ opacity: imageLoaded.vertical ? 1 : 0 }}
           />
         </div>
 
@@ -73,18 +67,13 @@ const About = () => {
           discovering a space where productivity, relaxation, and community
           thrive in harmony with your personal rhythm.
         </p>
-        <div
-          className={`image-placeholder ${imageLoaded.side ? "" : "loading"}`}
-        >
+        <div className="image-placeholder" style={{ width: "30%" }}>
           <img
             src={sideImage}
             alt="Side View"
             className="side-image"
-            onLoad={() => setImageLoaded({ ...imageLoaded, side: true })}
-            style={{
-              opacity: imageLoaded.side ? 1 : 0,
-              transition: "opacity 0.5s ease-in",
-            }}
+            onLoad={() => handleImageLoad("side")}
+            style={{ opacity: imageLoaded.side ? 1 : 0 }}
           />
         </div>
       </div>
