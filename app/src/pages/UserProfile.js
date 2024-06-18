@@ -70,7 +70,7 @@ const UserProfile = () => {
           <span>email:</span> {userData.email}
         </p>
         <p>
-          <span>username:</span>
+          <span>username: </span>
           {userData.username}
         </p>
       </div>
