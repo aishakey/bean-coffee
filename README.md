@@ -63,11 +63,6 @@ npm run dev
 
 After starting both the frontend and backend servers, open your browser and go to `http://localhost:3000` (or the port specified) to view the Bean application.
 
-## License
+## Project Link
 
-Bean is made available under the MIT License. For more details, see the [LICENSE.md](LICENSE.md) file.
-
-## Acknowledgements
-
-- Coffee lovers around the world
-- The digital nomad community
+Check out the live project [here](https://bean-coffeeshop-finder.netlify.app/).
